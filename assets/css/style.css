@@ -1,0 +1,99 @@
+/*
+========================================
+            Public style
+========================================
+*/
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+}
+body{
+    font-family: 'Josefin Sans', sans-serif;
+    color: #141517;
+    background-color: aquamarine;
+}
+
+/*
+========================================
+            Navbar
+========================================
+*/
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 26px 40px;
+    background-color: #fff;
+}
+nav .list{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+nav .list .list-item{
+    display: inline-block;
+    position: relative;
+}
+nav .list > .list-item:nth-child(4)::after{
+    content: "HOT";
+    background-color: #ff2020;
+    color: #fff;
+    position: absolute;
+    top: -22px;
+    font-size: 11px;
+    padding: 4px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    box-shadow: 3px 4px 5px 0px #6a5d5d;
+}
+nav .list .list-item:hover > .dropdown{
+    opacity: 1;
+    top: 49px;
+}
+nav .list .list-item > a{
+    text-decoration: none;
+    font-size: 19px;
+    margin-left: 50px;
+    color: #141517;
+    text-transform: capitalize;
+}
+nav .list .list-item .dropdown{
+    position: absolute;
+    list-style: none;
+    width: 190px;
+    padding: 35px 0;
+    top: 38px;
+    left: 20px;
+    background-color: #fff;
+    border-top: 5px solid #ff2020;
+    border-top-right-radius: 13px;
+    border-top-left-radius: 13px;
+    opacity: 0;
+    transition: all .3s ease-in;
+}
+nav .list .list-item .dropdown::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #ff2020;
+    top: -21px;
+    left: 22px;
+}
+nav .list .list-item .dropdown .dropdown-item{
+    margin: 11px 18px;
+}
+nav .list .list-item .dropdown .dropdown-item a{
+    text-decoration: none;
+    color: #141517;
+    font-size: 17px;
+}
+nav .nav-icons a{
+    display: inline-block;
+    margin-left: 46px;
+    color: #141517;
+}

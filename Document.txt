@@ -1,0 +1,7 @@
+Site: https://preview.colorlib.com/theme/timezone/
+
+Fontawesome:
+    <i class="fas fa-search"></i>
+    <i class="fas fa-user"></i>
+    <i class="fas fa-shopping-cart"></i>
+    <i class="fas fa-bars"></i>
